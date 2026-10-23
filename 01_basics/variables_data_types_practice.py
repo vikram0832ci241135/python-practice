@@ -15,7 +15,3 @@ print(f"City: {city}")
 celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = (celsius * 9 / 5) + 32
 print(f"Temperature in Fahrenheit: {fahrenheit}")
-
-# Q3: Swap two numbers without using a third variable.
-# Q4: Identify the data type of a value.
-# Q5: Convert the string "100" into an integer using type casting.
