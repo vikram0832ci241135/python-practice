@@ -1,5 +1,5 @@
 
-def binary_search(arr, target):
+def search_insert(arr, target):
     left = 0
     right = len(arr) - 1
 
@@ -13,8 +13,9 @@ def binary_search(arr, target):
         else:
             right = mid - 1
 
-    return -1
+    return left
 
 
-arr = [3, 7, 11, 16, 23, 31, 45]
-print(binary_search(arr, 23))  # 4
+print(search_insert([1, 3, 5, 6], 2))  # 1
+print(search_insert([1, 3, 5, 6], 7))  # 4
+print(search_insert([1, 3, 5, 6], 5))  # 2
