@@ -1,21 +1,22 @@
 
-def search_insert(arr, target):
+def first_occurrence(arr, target):
     left = 0
     right = len(arr) - 1
+    answer = -1
 
     while left <= right:
         mid = (left + right) // 2
 
         if arr[mid] == target:
-            return mid
+            answer = mid
+            right = mid - 1
         elif arr[mid] < target:
             left = mid + 1
         else:
             right = mid - 1
 
-    return left
+    return answer
 
 
-print(search_insert([1, 3, 5, 6], 2))  # 1
-print(search_insert([1, 3, 5, 6], 7))  # 4
-print(search_insert([1, 3, 5, 6], 5))  # 2
+arr = [1, 3, 5, 5, 5, 8, 10]
+print(first_occurrence(arr, 5))  # 2
