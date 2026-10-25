@@ -1,22 +1,22 @@
+a = [12,14,16,23,25,34,37,45,48,59,68,70]
 
-def first_occurrence(arr, target):
-    left = 0
-    right = len(arr) - 1
-    answer = -1
+search = 12
 
-    while left <= right:
-        mid = (left + right) // 2
+start = 0
+last = len(a)-1
+mid = (start + last)//2
 
-        if arr[mid] == target:
-            answer = mid
-            right = mid - 1
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
+while start <= last:
+    if a[mid] == search:
+        print (f"element found at index {mid}")
+        break
 
-    return answer
+    elif a[mid] < search:
+        start = mid + 1
+        mid = (start + last)//2
 
-
-arr = [1, 3, 5, 5, 5, 8, 10]
-print(first_occurrence(arr, 5))  # 2
+    elif a[mid] > search:
+        last = mid - 1
+        mid = (start +  last)//2
+else:
+    print("sorry your no is not exist")
